@@ -7,6 +7,7 @@ import TodoItem from './TodoItem';
 import todosData from './todosData';
 import React from 'react';
 import Counter from './Counter';
+import MemeContainer from './MemeGenerator/MemeContainer';
 
 class App extends React.Component {
   constructor() {
@@ -40,11 +41,12 @@ class App extends React.Component {
     const todoItems = this.state.todos.map(item => <TodoItem key={item.id} item={item} handleChange={this.handleChange}/>)
     return (
       <div>
-        <Header/>
+        {/* <Header/>
         <div className='todo-list'>
-          {/* <Counter/> */}
+           <Counter/> 
           {todoItems}
-        </div>
+        </div> */}
+        <MemeContainer/>
       </div>
      
     );
